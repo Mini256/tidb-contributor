@@ -10,12 +10,15 @@ TiDB Contributor List，TiDB 开源项目贡献者名单。
 
 当用户滑动滚动条到浏览器底部时会触发网页从 IndexedDB 加载更多数据渲染到表格当中。
 
-![](https://github.com/Mini256/tidb-contributor/blob/main/preview.png?raw=true)
+![电脑端预览图](https://github.com/Mini256/tidb-contributor/blob/main/preview.png?raw=true)
+
+![移动端预览图](https://github.com/Mini256/tidb-contributor/blob/main/preview2.png?raw=true)
 
 预览地址：https://mini256.github.io/tidb-contributor/
 
 ## TodoList
 - [x] 根据贡献数进行排名
-- [ ] 首次加载时的加载动画
+- [x] 首次加载时的加载动画
+- [x] 移动端适配
 - [ ] 根据Github名称进行搜索
 - [ ] 显示贡献者提交记录的折线图
