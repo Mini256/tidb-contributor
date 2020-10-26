@@ -1,0 +1,115 @@
+body {
+    background-color: #3620f1;
+}
+
+/*  项目简介  */
+.project-name {
+    text-align: center;
+    color: #fff;
+}
+
+/*  项目导航栏  */
+.project-navbar {
+    display: flex;
+    min-width: 800px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.project-navbar .navbar-menu {
+    display: flex;
+    color: #fff;
+    padding: 0 10px;
+}
+.project-navbar .navbar-item {
+    padding: 20px;
+    font-weight: 700;
+    border-bottom: 3px solid transparent;
+    margin: 0 10px;
+}
+.project-navbar .navbar-item.active {
+    border-bottom: 3px solid #fff;
+}
+
+.toolbar {
+    margin: 20px;
+}
+.search-input {
+    height: 20px;
+    border-radius: 5px;
+    text-indent: 5px;
+}
+
+/*  贡献者名单  */
+.contributor-table {
+    min-width: 800px;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 0 auto;
+    user-select: none;
+}
+.contributor-table-header {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #f9f9f9;
+    padding: 0 80px;
+}
+.contributor-table-heading {
+    height: 60px;
+    line-height: 60px;
+    color: #cccfd3;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 80px;
+    transition: background-color 0.8s;
+}
+.table-row:hover {
+    background-color: #fafafa;
+}
+.table-data {
+    display: flex;
+    flex: 1;
+    padding: 3px;
+    border-bottom: 1px solid #f9f9f9;
+}
+.contributor-info {
+    display: flex;
+}
+.contributor-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px 10px 5px 5px;
+}
+.contributor-username {
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    font-weight: 700;
+    color: #4c62b6;
+}
+.contributor-number {
+    height: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #5d636e;
+}
+.contributor-contribute-trend {
+    height: 60px;
+    line-height: 60px;
+}
+.contributor-contributions {
+    height: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #5d626e;
+}
