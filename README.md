@@ -8,7 +8,7 @@ TiDB Contributor List，TiDB 开源项目贡献者名单。
 
 下次打开页面时会直接从 IndexedDB 的缓存当中获取数据，缓存当中的数据默认是7天的有效期，过期之后再次打开页面会重新通过 Github API 获取数据。
 
- !(https://github.com/Mini256/tidb-contributor/blob/main/preview.png?raw=true)
+![](https://github.com/Mini256/tidb-contributor/blob/main/preview.png?raw=true)
 
 ## TodoList
 - [x] 根据贡献数进行排名
