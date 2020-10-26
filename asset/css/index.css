@@ -1,6 +1,11 @@
 body {
     background-color: #3620f1;
     min-height: 101vh;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
 }
 
 /*  项目简介  */
@@ -12,7 +17,7 @@ body {
 /*  项目导航栏  */
 .project-navbar {
     display: flex;
-    min-width: 800px;
+    /* min-width: 800px; */
     max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
@@ -32,24 +37,28 @@ body {
     border-bottom: 3px solid #fff;
 }
 
+/*  工具栏  */
 .toolbar {
-    margin: 20px;
+    padding: 15px;
 }
 .search-input {
-    height: 20px;
+    height: 32px;
     border-radius: 5px;
     text-indent: 5px;
 }
 
 /*  贡献者名单  */
 .contributor-table {
-    min-width: 800px;
+    /* min-width: 800px; */
     max-width: 1200px;
     background-color: #fff;
     border-radius: 5px;
     margin: 0 auto;
     user-select: none;
+    margin-bottom: 30px;
 }
+
+/*  贡献者名单 - 表头  */
 .contributor-table-header {
     display: flex;
     justify-content: space-around;
@@ -64,6 +73,21 @@ body {
     font-size: 14px;
 }
 
+.contributor-rank-col {
+    flex: 0.3;
+}
+.contributor-info-col {
+    flex: 1;
+}
+.contributor-trend-col {
+    flex: 1;
+}
+.contributor-contribution-col {
+    flex: 0.3;
+    justify-content: flex-end;
+}
+
+/*  贡献者名单 - 数据行  */
 .table-row {
     display: flex;
     justify-content: space-around;
@@ -75,7 +99,6 @@ body {
 }
 .table-data {
     display: flex;
-    flex: 1;
     padding: 3px;
     border-bottom: 1px solid #f9f9f9;
 }
@@ -113,4 +136,80 @@ body {
     font-weight: 700;
     font-size: 20px;
     color: #5d626e;
+}
+
+/*  移动端适配  */
+@media (max-width: 768px){
+    /*  导航栏  */
+    .project-navbar {
+        display: none;
+    }
+    .project-navbar .navbar-menu {
+        display: block;
+    }
+    .search-input {
+        height: 40px;
+        width: 100%;
+        border-radius: 5px;
+        text-indent: 5px;
+    }
+    .project-navbar .navbar-item {
+        padding: 15px;
+        font-size: 12px;
+    }
+    .project-navbar .navbar-item.active {
+        border-bottom: none;
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    /*  表格  */
+    .contributor-table-header {
+        padding: 0 15px;
+    }
+    .contributor-table-heading {
+        font-size: 12px;
+    }
+    .table-row {
+        padding: 0 15px;
+    }
+    .contributor-rank-col {
+        flex: 0.3;
+    }
+    .contributor-info-col {
+        flex: 1;
+    }
+    .contributor-trend-col {
+        flex: 0.4;
+    }
+    .contributor-contribution-col {
+        flex: 0.3;
+        justify-content: flex-end;
+    }
+    .hidden-xs {
+        display: none;
+    }
+}
+
+/*   加载动画  */
+.loading {
+    position: relative;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 100px auto;
+
+    background: url(../img/loading.gif) no-repeat center;
+    background-size: cover;
+    background-position: top;
+}
+.loading > span {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #371bed;
+}
+.hidden {
+    display: none;
 }
