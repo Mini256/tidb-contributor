@@ -19,6 +19,9 @@ DBOpenRequest.onsuccess = function(event) {
     let expire = (Date.now() - Number(loadTime)) > 7 * 24 * 3600 * 1000;
     
     if (!loadFinished || (loadFinished && expire) ) {
+        localStorage.removeItem('LOAD_FINISHED');
+        localStorage.removeItem('LOAD_TIME');
+
         loadAllContributerList(() => {
             localStorage.setItem('LOAD_FINISHED', true);
             localStorage.setItem('LOAD_TIME', Date.now());
@@ -129,12 +132,8 @@ function loadContributerPage(pageIndex, pageSize) {
     return new Promise((resolve, reject) => {
         let count = 0;
         let resultSet = [];
-        
-        var getRequest = index.get('zz-jason');
-        getRequest.onsuccess = function() {
-            console.log(getRequest.result);
-        }
 
+        // 通过索引实现根据贡献数排序
         index.openCursor(IDBKeyRange.upperBound('contributions', true), "prev").onsuccess = function (event) {
             var cursor = event.target.result;
 
@@ -252,6 +251,9 @@ function renderContributerPage(list, pageIndex, pageSize) {
     let pageIndex = 1;
     window.addEventListener('scrollToBottom', function(e) {
         pageIndex = pageIndex + 1;
+
+        if (!db) return; 
+        
         loadContributerPage(pageIndex).then(({ resultSet, pageIndex, pageSize}) => {
             renderContributerPage(resultSet, pageIndex, pageSize);
         });

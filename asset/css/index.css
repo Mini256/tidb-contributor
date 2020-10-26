@@ -192,12 +192,15 @@ body {
 }
 
 /*   加载动画  */
+.loading-wrapper {
+    overflow: hidden;
+}
 .loading {
     position: relative;
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    margin: 100px auto;
+    margin: 150px auto;
 
     background: url(../img/loading.gif) no-repeat center;
     background-size: cover;
